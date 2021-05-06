@@ -108,7 +108,8 @@ card-component card-contents card-stats card-stat {
 }
 card-component card-contents card-stats card-stat::after {
   content: attr(label);
-  font-size: 14pt;
+  text-transform: uppercase;
+  font-size: 10pt;
   font-weight: 400;
   color: #87859f;
 }
