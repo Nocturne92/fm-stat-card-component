@@ -113,11 +113,8 @@ card-component {
         flex: 1 1 auto;
 
         @media #{$desktop} {
-          &:not(:first-child) {
-            margin-left: 12px;
-          }
           &:not(:last-child) {
-            margin-right: 12px;
+            margin-right: 24px;
           }
         }
 
@@ -151,9 +148,23 @@ card-component {
   margin: 24px 0px;
   color: color('card-text-faded');
 
+  span {
+    @media #{$desktop} {
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+
+    @media #{$mobile} {
+      &:not(:last-child) {
+        margin-bottom: 1ex;
+      }
+    }
+  }
+
   @media #{$mobile} {
     flex-direction: column;
-    margin: 24px 0px;
+    margin: 0px 0px 24px 0px;
     
     justify-content: center;
     align-items: center;
