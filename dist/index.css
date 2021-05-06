@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0a0c1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+card-component {
+  margin-left: 24px;
+  margin-right: 24px;
+  user-select: none;
+  max-width: 1100px;
+  clip-path: inset(0 0 0 0 round 10px);
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+  color: #f7f8f9;
+  background-color: #1c1938;
+}
+@media (max-width: 800px) {
+  card-component {
+    flex-direction: column;
+    margin: 24px 24px;
+    max-width: 450px;
+  }
+}
+card-component card-image {
+  display: block;
+  flex: 1 1 50%;
+  height: 450px;
+  order: 2;
+  background-image: var(--desktop-image);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(40%) contrast(90%) grayscale(100%) sepia(100%) hue-rotate(240deg) saturate(3);
+}
+@media (max-width: 800px) {
+  card-component card-image {
+    flex: 0 0 auto;
+    height: 0;
+    padding-bottom: 80%;
+    order: 1;
+    background-image: var(--mobile-image);
+  }
+}
+card-component card-contents {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  order: 1;
+  padding: 80px 70px;
+  color: white;
+}
+@media (max-width: 800px) {
+  card-component card-contents {
+    padding: 40px 24px;
+    text-align: center;
+  }
+}
+card-component card-contents card-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+card-component card-contents card-title b {
+  color: #905abe;
+}
+card-component card-contents card-description {
+  margin: 24px 0px;
+  flex: 1 1 auto;
+  color: #87859f;
+}
+card-component card-contents card-stats {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 800px) {
+  card-component card-contents card-stats {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+card-component card-contents card-stats card-stat {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  font-size: 16pt;
+  font-weight: 700;
+}
+@media (min-width: 800px) {
+  card-component card-contents card-stats card-stat:not(:first-child) {
+    margin-left: 12px;
+  }
+  card-component card-contents card-stats card-stat:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+@media (max-width: 800px) {
+  card-component card-contents card-stats card-stat {
+    justify-content: center;
+    align-items: center;
+  }
+  card-component card-contents card-stats card-stat:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+card-component card-contents card-stats card-stat::after {
+  content: attr(label);
+  font-size: 14pt;
+  font-weight: 400;
+  color: #87859f;
+}
+
+.attribution {
+  display: flex;
+  flex-direction: row;
+  margin: 24px 0px;
+  color: #87859f;
+}
+@media (max-width: 800px) {
+  .attribution {
+    flex-direction: column;
+    margin: 24px 0px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.attribution a {
+  text-decoration: none;
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

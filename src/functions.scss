@@ -1,5 +1,0 @@
-@use './colors.scss';
-
-@function color($color) {
-  @return map-get(colors.$map, $color);
-}
