@@ -93,11 +93,8 @@ card-component card-contents card-stats card-stat {
   font-weight: 700;
 }
 @media (min-width: 800px) {
-  card-component card-contents card-stats card-stat:not(:first-child) {
-    margin-left: 12px;
-  }
   card-component card-contents card-stats card-stat:not(:last-child) {
-    margin-right: 12px;
+    margin-right: 24px;
   }
 }
 @media (max-width: 800px) {
@@ -122,10 +119,20 @@ card-component card-contents card-stats card-stat::after {
   margin: 24px 0px;
   color: #87859f;
 }
+@media (min-width: 800px) {
+  .attribution span:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+@media (max-width: 800px) {
+  .attribution span:not(:last-child) {
+    margin-bottom: 1ex;
+  }
+}
 @media (max-width: 800px) {
   .attribution {
     flex-direction: column;
-    margin: 24px 0px;
+    margin: 0px 0px 24px 0px;
     justify-content: center;
     align-items: center;
   }
